@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { CatsModule } from './cats/cats.module';
 import { DevtoolsModule } from '@nestjs/devtools-integration';
 import { ConfigModule } from '@nestjs/config';
+import { CatsModule } from './cats/cats.module.js';
+import { AppController } from './app.controller.js';
+import { AppService } from './app.service.js';
 
 @Module({
   imports: [

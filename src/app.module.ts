@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CatsModule } from './cats/cats.module';
 import { DevtoolsModule } from '@nestjs/devtools-integration';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { DevtoolsModule } from '@nestjs/devtools-integration';
     DevtoolsModule.register({
       http: process.env.NODE_ENV !== 'production',
     }),
+    ConfigModule.forRoot(),
   ],
   controllers: [AppController],
   providers: [AppService],
